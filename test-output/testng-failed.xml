@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="url" value="https://www.bestbuy.com/"/>
+  <listeners>
+    <listener class-name="utils.Listener"/>
+  </listeners>
+  <test thread-count="5" name="EdgeTest(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="test.TC002_Signin">
+        <methods>
+          <include name="browserClose"/>
+          <include name="launchBrowser"/>
+          <include name="signin_Test" invocation-numbers="1"/>
+          <include name="excelfile"/>
+        </methods>
+      </class> <!-- test.TC002_Signin -->
+      <class name="test.TC003_Menu">
+        <methods>
+          <include name="browserClose"/>
+          <include name="launchBrowser"/>
+          <include name="navigation"/>
+        </methods>
+      </class> <!-- test.TC003_Menu -->
+      <class name="test.TC008_Checkout">
+        <methods>
+          <include name="browserClose"/>
+          <include name="launchBrowser"/>
+          <include name="payment"/>
+        </methods>
+      </class> <!-- test.TC008_Checkout -->
+      <class name="test.TC001_NewAcount">
+        <methods>
+          <include name="browserClose"/>
+          <include name="launchBrowser"/>
+          <include name="NewAccount_test" invocation-numbers="0 1 2 4"/>
+          <include name="testdataFile"/>
+        </methods>
+      </class> <!-- test.TC001_NewAcount -->
+      <class name="test.TC005_ToSearch">
+        <methods>
+          <include name="browserClose"/>
+          <include name="launchBrowser"/>
+          <include name="addcart"/>
+        </methods>
+      </class> <!-- test.TC005_ToSearch -->
+    </classes>
+  </test> <!-- EdgeTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
